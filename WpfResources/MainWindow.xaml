@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfResources.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfResources"
+        mc:Ignorable="d"
+        Title="Templates" Height="670" Width="780" Icon="Images/diagram.png">
+    <Window.Resources>
+        <ResourceDictionary Source="ProjectResources/DarkTemplate.xaml" />
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Margin="25,0" FontSize="45" VerticalContentAlignment="Bottom"
+               >Contact us</Label>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="25,0" TextWrapping="Wrap">We are here to answer any questions you may have about our combadi experiences.
+            Reach out to us and we'll respond as soon as we can.</TextBlock>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="25,0" TextWrapping="Wrap">Even if there is something you have always wanted to experience and can't find it on
+            combadi, let us know and we promise we'll do our best to find it for you and send you there.</TextBlock>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Margin="25,0,15,0" VerticalAlignment="Bottom">
+            <Label Template="{StaticResource LabelKey}">NAME:</Label>
+            <TextBox Template="{StaticResource TextBoxTemplate}" Height="60" ></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Margin="25,0,15,0" VerticalAlignment="Bottom">
+            <Label Template="{StaticResource LabelKey}">EMAIL:</Label>
+            <TextBox Height="60" Template="{StaticResource TextBoxTemplate}"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="25,0,15,0" VerticalAlignment="Bottom">
+            <Label Template="{StaticResource LabelKey}">MESSAGE:</Label>
+            <TextBox Template="{StaticResource TextBoxTemplate}" Height="130" ></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="0" Margin="25,0,15,0" VerticalAlignment="Bottom">
+            <Label Template="{StaticResource LabelKey}">How Much is 4+6?</Label>
+            <TextBox Template="{StaticResource TextBoxTemplate}" Height="60" ></TextBox>
+        </StackPanel>
+
+        <Button Grid.Row="6" Grid.Column="1" Height="45" Width="150" Template="{StaticResource LightBtn}" Cursor="Hand">SEND</Button>
+    </Grid>
+</Window>

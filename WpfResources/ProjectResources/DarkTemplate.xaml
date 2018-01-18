@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfResources.ProjectResources">
+
+    <ControlTemplate TargetType="Button" x:Key="LightBtn">
+        <Border Background="Yellow">
+            <ContentControl Foreground="Black"
+                            Content="{TemplateBinding Content}"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontSize="18"></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate TargetType="Label" x:Key="LabelKey">
+        <Border>
+            <ContentControl Content="{TemplateBinding Content}" 
+                            FontFamily="Italic"></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+    <Style TargetType="Grid">
+        <Setter Property="Background" Value="Gray"></Setter>
+    </Style>
+    <ControlTemplate TargetType="TextBox" x:Key="TextBoxTemplate">
+        <Border Background="Gainsboro">
+            <ContentControl></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+</ResourceDictionary>
